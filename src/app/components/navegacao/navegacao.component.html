@@ -1,0 +1,30 @@
+<mat-drawer-container class="container" autosize>
+  <mat-drawer #drawer class="sidenav" mode="side" position="end">
+    <mat-nav-list class="sidenav-lista">
+      <a mat-list-item routerLink="categorias">
+        <fa-icon [icon]="faSitemap"></fa-icon>
+        Categorias
+      </a>
+      <a mat-list-item routerLink="categorias">
+        <fa-icon [icon]="faSitemap"></fa-icon>
+        Categorias
+      </a>
+    </mat-nav-list>
+  </mat-drawer>
+  <div class="sidenav-conteudo">
+    <section class="toolbar">
+      <fa-icon class="seta-voltar" [icon]="faArrowLeft" size="3x"></fa-icon>
+      <mat-form-field class="campo-buscar"  appearance="outline">
+        <mat-label>Digite o item desejado</mat-label>
+        <input matInput placeholder="Digite o intem desejado" [(ngModel)]="campoBuscar">
+        <mat-icon matIconSuffix>find_in_page</mat-icon>
+      </mat-form-field>
+
+      <button class="botao-toggle" type="button" mat-button (click)="drawer.toggle()">
+        <fa-icon [icon]="faBars"></fa-icon>
+      </button>
+    </section>
+
+  </div>
+
+</mat-drawer-container>
